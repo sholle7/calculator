@@ -6,11 +6,19 @@
     border: 1px solid black;
 }
 
-.display p {
+.display p:first-child {
     position: absolute;
     bottom: 0;
     right: 0;
     padding: 20px;
     font-size: 2em;
     font-weight: bold;
+}
+
+.previous-value{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: bold;
+    opacity: 0.8;
 }

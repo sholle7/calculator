@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 function App() {
   const [previousValue, setPreviousValue] = useState("0");
-  const [currentOperator, setcurrentOperator] = useState("");
+  const [currentOperator, setCurrentOperator] = useState("");
   const [value, setValue] = useState("0");
 
   const addDigit = (digit) => {
@@ -33,7 +33,8 @@ function App() {
         default:
           break;
       }
-      setcurrentOperator("");
+      setCurrentOperator("");
+      setPreviousValue("");
   };
 
   const addOperator = (operator) =>{
@@ -71,18 +72,18 @@ function App() {
         default:
           break;
       }
-      setcurrentOperator(operator);
+      setCurrentOperator(operator);
       return;
     }
 
-    setcurrentOperator(operator)
+    setCurrentOperator(operator)
     setPreviousValue(value);
     setValue("0");
   }
   
   const clearInput = () =>{
     setPreviousValue("0");
-    setcurrentOperator("");
+    setCurrentOperator("");
     setValue("0");
   }
 
@@ -91,7 +92,7 @@ function App() {
       <h1>Calculator</h1>
      
       <div className='container'>
-        <Display value={value}/>
+        <Display value={value} previousValue={previousValue}/>
 
         <Button handleClick={()=>{addDigit("7")}}buttonValue={7}/>
         <Button handleClick={()=>{addDigit("8")}}buttonValue={8}/>
