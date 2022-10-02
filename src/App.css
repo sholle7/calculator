@@ -1,0 +1,25 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Roboto-Thin", cursive, sans-serif;
+    background: #00d2ff;  
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+}
+
+h1{
+    text-align: center;
+    margin: 100px;
+    font-size: 5rem;
+}
+
+.container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 100px);
+}
+
